@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a9ski.MainWindowController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="108.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.0" minWidth="10.0" prefWidth="454.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="529.0" minWidth="10.0" prefWidth="48.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="267.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="267.0" minHeight="10.0" prefHeight="116.0" vgrow="SOMETIMES" />    
+  </rowConstraints>
+   <children>
+      <Label text="XML file:" />
+      <TextField editable="false" GridPane.columnIndex="1" fx:id="xmlFileNameText" />
+      <Button fx:id="browseButton" mnemonicParsing="false" onAction="#onBrowseClicked" text="..." GridPane.columnIndex="2" />
+      <Button fx:id="extractButton" disable="true" mnemonicParsing="false" onAction="#onExtractClicked" prefHeight="26.0" prefWidth="469.0" text="Extract" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="Extracted file:" GridPane.rowIndex="2" />
+      <TextField fx:id="extractedFileNameText" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="openButton" disable="true" mnemonicParsing="false" onAction="#onOpenClicked" text="Open" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+   </children>
+</GridPane>
